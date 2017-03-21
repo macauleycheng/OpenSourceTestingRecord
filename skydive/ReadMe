@@ -5,3 +5,9 @@ The folder include the build go lang need some packages, if you can't find it, y
 My running environment it Centos 7.
 
 The skydive execusion file in gobin, you can use it to directly run skydive.
+
+
+REST: ref https://skydive-project.github.io/skydive/api/rest/
+
+Example:
+curl -g -i -X POST --header "Content-Type: application/json" -d '{ "GremlinQuery":"G.V()" }' http://192.168.200.73:8082/api/topology
