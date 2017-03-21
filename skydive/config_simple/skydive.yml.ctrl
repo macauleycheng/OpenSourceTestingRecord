@@ -1,0 +1,46 @@
+auth:
+  type: keystone
+  analyzer_username: admin
+  analyzer_password: password
+
+logging:
+  default: INFO
+
+openstack:
+  auth_url: http://192.168.200.71:35357/v3
+  username: admin
+  password: password
+  tenant_name: admin
+  region_name: RegionOne
+  domain_name: Default
+
+etcd:
+  servers:
+    - http://192.168.200.71:2379
+  data_dir: /tmp/skydive-etcd
+
+graph:
+  backend: elasticsearch
+
+analyzers:
+  - 192.168.200.71:8082
+
+agent:
+  listen: 192.168.200.71:8081
+  flow:
+    probes:
+      - ovssflow
+      - gopacket
+  topology:
+    probes:
+      - netlink
+      - netns
+      - ovsdb
+      - neutron
+
+analyzer:
+  storage: elasticsearch
+  topology:
+    probes:
+
+  listen: 192.168.200.71:8082
