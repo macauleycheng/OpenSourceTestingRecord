@@ -1,0 +1,7 @@
+Ref https://skydive-project.github.io/skydive/getting-started/install/ to build the skydive
+Make sure you setup the right GOPATH and GOBIn. Remember to export GOBIN into PATH env.
+
+The folder include the build go lang need some packages, if you can't find it, you can just use it.
+My running environment it Centos 7.
+
+The skydive execusion file in gobin, you can use it to directly run skydive.
